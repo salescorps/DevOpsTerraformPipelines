@@ -41,7 +41,7 @@ stages:
             command: 'validate'
             allowTelemetryCollection: true
   - stage: tfdeploy
-    condition: successded('tfvalidate')
+    condition: succeeded('tfvalidate')
     dependsOn: tfvalidate
     jobs: 
     - job: apply
